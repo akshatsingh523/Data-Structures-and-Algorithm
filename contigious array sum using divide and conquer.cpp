@@ -22,12 +22,12 @@ int maxcrossingsum(int a[],int l,int m,int h){
     }
     sum=0;
     int right_sum=INT_MIN;
-    for(int i=m;i<h;i++){
+    for(int i=m+1;i<=h;i++){
         sum=sum+a[i];
         if(sum>right_sum)
         right_sum=sum;
     }
-    return max(left_sum+right_sum-a[m],left_sum,right_sum);
+    return max(left_sum+right_sum,left_sum,right_sum);
 }
 
 int maxsubarraysum(int a[],int l,int h){
