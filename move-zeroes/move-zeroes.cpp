@@ -6,8 +6,8 @@ public:
             if(nums[i]==0)
            { flag++;}
         }
-    vector<int>::iterator new_end;
-    new_end = remove(nums.begin(),nums.end(),0);
+    // vector<int>::iterator new_end;
+    remove(nums.begin(),nums.end(),0);
     for(int i=0;i<flag;i++){
         nums.pop_back();
     }
