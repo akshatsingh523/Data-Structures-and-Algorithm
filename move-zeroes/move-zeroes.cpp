@@ -4,15 +4,13 @@ public:
         int flag=0;
         for(int i=0;i<nums.size();i++){
             if(nums[i]==0)
-           { flag++;}
+            flag++;
         }
-    // vector<int>::iterator new_end;
     remove(nums.begin(),nums.end(),0);
-    for(int i=0;i<flag;i++){
-        nums.pop_back();
-    }
-    for(int i=0;i<flag;i++){
+    for(int i=0;i<flag;i++)
+        nums.pop_back();    
+        
+    for(int i=0;i<flag;i++)
         nums.push_back(0);
-    }
     }
 };
