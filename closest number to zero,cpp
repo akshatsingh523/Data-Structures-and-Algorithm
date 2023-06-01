@@ -1,0 +1,38 @@
+class Solution {
+public:
+    int findClosestNumber(vector<int>& nums) {
+        set<int> s;
+        int a=0;
+        for(auto x:nums){
+            s.insert(x);
+        }
+        int n=INT_MAX;
+        int p=INT_MAX;
+        int flag=0;
+        for(auto x:s){
+            if(x<0){
+                n=x;
+            }
+            if(x==0){
+                flag=1;
+                a=0;
+                break;
+            }
+            if(x>0){
+                flag=2;
+                p=x;
+                break;
+            }
+        }
+        cout<<n<<" "<<p<<endl;
+        if(flag==1){
+            return a;
+        }
+        if(abs(n)<p){
+            return n;
+        }
+        else{
+            return p;
+        }
+    }
+};
