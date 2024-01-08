@@ -13,7 +13,7 @@ private:
 
 public:
     int tribonacci(int n) {
-        std::vector<int> memo(n + 1, -1);
+        vector<int> memo(n + 1, -1);
         return helper(n, memo);
     }
 };
