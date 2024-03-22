@@ -14,14 +14,13 @@ public:
         ListNode* node = head;
         set<ListNode*> s;
 
-        while (node != nullptr) { // Check if node is not null
+        while (node != nullptr) { 
             if (s.find(node) != s.end()) {
-                // Found the start of the cycle
                 return node;
             }
             s.insert(node);
             node = node->next;
         }
-        return nullptr; // No cycle found
+        return nullptr; 
     }
 };
