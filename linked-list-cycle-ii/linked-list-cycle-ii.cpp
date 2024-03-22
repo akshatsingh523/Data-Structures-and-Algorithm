@@ -10,10 +10,8 @@ class Solution {
 public:
     ListNode *detectCycle(ListNode *head) {
         if (head == NULL || head->next == NULL) return nullptr;
-
         ListNode* node = head;
         set<ListNode*> s;
-
         while (node != nullptr) { 
             if (s.find(node) != s.end()) {
                 return node;
